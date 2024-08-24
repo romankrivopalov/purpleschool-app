@@ -1,9 +1,9 @@
 import { Text, View, StyleSheet } from 'react-native';
 import { ErrorNotificationProps } from './ErrorNotification.props';
-import { useEffect, useState } from 'react';
+import { ReactElement, useEffect, useState } from 'react';
 import { Colors, Fonts, Window } from '../tokens';
 
-export default function ErrorNotification({ message }: ErrorNotificationProps): JSX.Element {
+export default function ErrorNotification({ message }: ErrorNotificationProps): ReactElement {
 	const [isShown, setIsShown] = useState(false);
 
 	useEffect(() => {
@@ -25,7 +25,7 @@ export default function ErrorNotification({ message }: ErrorNotificationProps): 
 const styles = StyleSheet.create({
 	container: {
 		position: 'absolute',
-		top: 0,
+		top: 50,
 		padding: 15,
 		width: Window.width,
 		backgroundColor: Colors.red,
