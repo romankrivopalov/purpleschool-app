@@ -1,5 +1,5 @@
 import { useFonts } from 'expo-font';
-import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import { Stack, SplashScreen } from 'expo-router';
 import { Colors } from '../shared/tokens';
@@ -34,7 +34,7 @@ export default function RootLayout() {
 					contentStyle: {
 						backgroundColor: Colors.black,
 					},
-					headerShown: true,
+					headerShown: false,
 				}}
 			>
 				<Stack.Screen name="login" />
